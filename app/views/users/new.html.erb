@@ -1,0 +1,16 @@
+<%= form_for :user, url: confirm_users_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+  <label><%= f.radio_button :sex, :men %>men</label>
+  <label><%= f.radio_button :sex, :women %>women</label>
+  <p>
+    <%= f.submit '確認画面へ'%>
+  </p>
+<% end %>

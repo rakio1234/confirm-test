@@ -1,0 +1,19 @@
+<p> name: <%= @user.name %></p>
+<p> email: <%= @user.email %></p>
+<p> sex: <%= @user.sex %></p>
+
+<%= form_for :user, url: new_users_path do |f| %>
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :email %>
+  <%= f.hidden_field :sex %>
+  <%= f.submit '入力画面へ戻る'%>
+<% end %>
+
+<%= form_for :user, url: users_path do |f| %>
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :email %>
+  <%= f.hidden_field :sex %>
+  <%= f.submit '登録する'%>
+<% end %>
+
+
